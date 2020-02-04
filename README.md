@@ -11,16 +11,7 @@ To prevent confusion, in previous lessons I manually turned off the strong param
 
 ## Why Strong Params
 
-In the Rails app in this lesson there is our blog application with Strong Params *disabled*. Create a new Post by going to `/posts/new`. Once you have created that post, go ahead and edit it at `/posts/1/edit`. You'll notice there is no Description field! In this case, I don't want the user to be able to modify the description of a post once it's been created. This happens in all kinds of different cases. You wouldn't want a bank user to be able to edit their account number or balance, would you? But! `balance` is still a field on the account class. In this case, `description` is still an attribute for the Post class. Let's see if a user could "hack" our form to be able to modify the `description`.
-
-1. Right click and inspect the page
-2. Find the input for title. it should look like this: `<input type="text" value="asdferwer" name="post[title]" id="post_title">`
-3. Right click on choose "Edit as HTML"
-4. Add the following new Description field:
-
-```
-<br>
-<label>Description:</label>
+In the Rails app in this lesson there is our blog application with Strong Params *disabled*. Create a new Post by going to `/posts/new`. Once you have created that post, go ahead and edit it at `/posts/1/edit`. You'll notice there is no Description field! In this case, I don't want the user to be able to modify the description of a post once it's been created. This happens in all kinds of different cases. You wouldn't want a bank user to be able to edit their account number or balance, would you? But! `balance` is still a field on the account class. 
 <br>
 <input type="text" value="malicious description" name="post[description]" id="post_description">
 ```
