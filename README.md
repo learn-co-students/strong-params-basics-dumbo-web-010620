@@ -130,3 +130,9 @@ end
 Test this out in the browser and you can see that you can now create and update posts without any errors. And you will also notice that all of the Rspec tests are still passing.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/strong-params-basics'>Strong Params Basics</a> on Learn.co and start learning to code for free.</p>
+
+
+
+def post_params(*args)
+  params.require(:post).permit(*args)
+end
